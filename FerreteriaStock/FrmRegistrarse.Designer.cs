@@ -38,17 +38,11 @@
             btnLimpiar = new Button();
             btnCancelar = new Button();
             btnAceptar = new Button();
-            mskTelefonoFijo = new MaskedTextBox();
-            lblTelefonoFijo = new Label();
             mskCorreo = new MaskedTextBox();
             lblCorreo = new Label();
-            txtDireccion = new TextBox();
-            mskTelefono = new MaskedTextBox();
             txtApellido = new TextBox();
             txtNombre = new TextBox();
             lblApellido = new Label();
-            lblTelefonoCelular = new Label();
-            lblDireccion = new Label();
             lblNombre = new Label();
             lblNuevoUsuario = new Label();
             dtmRegistrarse = new DateTimePicker();
@@ -66,17 +60,11 @@
             grpNuevoRegistro.Controls.Add(btnLimpiar);
             grpNuevoRegistro.Controls.Add(btnCancelar);
             grpNuevoRegistro.Controls.Add(btnAceptar);
-            grpNuevoRegistro.Controls.Add(mskTelefonoFijo);
-            grpNuevoRegistro.Controls.Add(lblTelefonoFijo);
             grpNuevoRegistro.Controls.Add(mskCorreo);
             grpNuevoRegistro.Controls.Add(lblCorreo);
-            grpNuevoRegistro.Controls.Add(txtDireccion);
-            grpNuevoRegistro.Controls.Add(mskTelefono);
             grpNuevoRegistro.Controls.Add(txtApellido);
             grpNuevoRegistro.Controls.Add(txtNombre);
             grpNuevoRegistro.Controls.Add(lblApellido);
-            grpNuevoRegistro.Controls.Add(lblTelefonoCelular);
-            grpNuevoRegistro.Controls.Add(lblDireccion);
             grpNuevoRegistro.Controls.Add(lblNombre);
             grpNuevoRegistro.Location = new Point(12, 25);
             grpNuevoRegistro.Name = "grpNuevoRegistro";
@@ -86,7 +74,7 @@
             // 
             // txtContraseña
             // 
-            txtContraseña.Location = new Point(558, 66);
+            txtContraseña.Location = new Point(558, 74);
             txtContraseña.Name = "txtContraseña";
             txtContraseña.PasswordChar = 'x';
             txtContraseña.Size = new Size(100, 23);
@@ -102,7 +90,7 @@
             // lblContraseña
             // 
             lblContraseña.AutoSize = true;
-            lblContraseña.Location = new Point(452, 73);
+            lblContraseña.Location = new Point(449, 85);
             lblContraseña.Name = "lblContraseña";
             lblContraseña.Size = new Size(67, 15);
             lblContraseña.TabIndex = 20;
@@ -119,7 +107,7 @@
             // 
             // mskDocumento
             // 
-            mskDocumento.Location = new Point(558, 108);
+            mskDocumento.Location = new Point(311, 77);
             mskDocumento.Mask = "99999999";
             mskDocumento.Name = "mskDocumento";
             mskDocumento.Size = new Size(100, 23);
@@ -129,7 +117,7 @@
             // lblDocumento
             // 
             lblDocumento.AutoSize = true;
-            lblDocumento.Location = new Point(452, 111);
+            lblDocumento.Location = new Point(239, 85);
             lblDocumento.Name = "lblDocumento";
             lblDocumento.Size = new Size(69, 15);
             lblDocumento.TabIndex = 17;
@@ -153,6 +141,7 @@
             btnCancelar.TabIndex = 15;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnAceptar
             // 
@@ -162,27 +151,11 @@
             btnAceptar.TabIndex = 14;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
-            // 
-            // mskTelefonoFijo
-            // 
-            mskTelefonoFijo.Location = new Point(311, 128);
-            mskTelefonoFijo.Mask = "(999)000-0000";
-            mskTelefonoFijo.Name = "mskTelefonoFijo";
-            mskTelefonoFijo.Size = new Size(100, 23);
-            mskTelefonoFijo.TabIndex = 13;
-            // 
-            // lblTelefonoFijo
-            // 
-            lblTelefonoFijo.AutoSize = true;
-            lblTelefonoFijo.Location = new Point(233, 136);
-            lblTelefonoFijo.Name = "lblTelefonoFijo";
-            lblTelefonoFijo.Size = new Size(72, 15);
-            lblTelefonoFijo.TabIndex = 12;
-            lblTelefonoFijo.Text = "Telefono fijo";
+            btnAceptar.Click += btnAceptar_Click;
             // 
             // mskCorreo
             // 
-            mskCorreo.Location = new Point(311, 82);
+            mskCorreo.Location = new Point(113, 82);
             mskCorreo.Name = "mskCorreo";
             mskCorreo.Size = new Size(100, 23);
             mskCorreo.TabIndex = 11;
@@ -190,26 +163,11 @@
             // lblCorreo
             // 
             lblCorreo.AutoSize = true;
-            lblCorreo.Location = new Point(239, 85);
+            lblCorreo.Location = new Point(23, 82);
             lblCorreo.Name = "lblCorreo";
             lblCorreo.Size = new Size(43, 15);
             lblCorreo.TabIndex = 10;
             lblCorreo.Text = "Correo";
-            // 
-            // txtDireccion
-            // 
-            txtDireccion.Location = new Point(113, 77);
-            txtDireccion.Name = "txtDireccion";
-            txtDireccion.Size = new Size(100, 23);
-            txtDireccion.TabIndex = 9;
-            // 
-            // mskTelefono
-            // 
-            mskTelefono.Location = new Point(113, 131);
-            mskTelefono.Mask = "000-000-0000";
-            mskTelefono.Name = "mskTelefono";
-            mskTelefono.Size = new Size(100, 23);
-            mskTelefono.TabIndex = 8;
             // 
             // txtApellido
             // 
@@ -233,25 +191,6 @@
             lblApellido.Size = new Size(51, 15);
             lblApellido.TabIndex = 3;
             lblApellido.Text = "Apellido";
-            // 
-            // lblTelefonoCelular
-            // 
-            lblTelefonoCelular.AutoSize = true;
-            lblTelefonoCelular.Location = new Point(6, 131);
-            lblTelefonoCelular.Name = "lblTelefonoCelular";
-            lblTelefonoCelular.Size = new Size(92, 15);
-            lblTelefonoCelular.TabIndex = 2;
-            lblTelefonoCelular.Text = "Telefono Celular";
-            lblTelefonoCelular.Click += lblTelefonoCelular_Click;
-            // 
-            // lblDireccion
-            // 
-            lblDireccion.AutoSize = true;
-            lblDireccion.Location = new Point(15, 74);
-            lblDireccion.Name = "lblDireccion";
-            lblDireccion.Size = new Size(51, 15);
-            lblDireccion.TabIndex = 1;
-            lblDireccion.Text = "Direcion";
             // 
             // lblNombre
             // 
@@ -299,16 +238,10 @@
         private GroupBox grpNuevoRegistro;
         private TextBox txtNombre;
         private Label lblApellido;
-        private Label lblTelefonoCelular;
-        private Label lblDireccion;
         private Label lblNombre;
         private TextBox txtApellido;
-        private MaskedTextBox mskTelefono;
-        private TextBox txtDireccion;
         private MaskedTextBox mskCorreo;
         private Label lblCorreo;
-        private MaskedTextBox mskTelefonoFijo;
-        private Label lblTelefonoFijo;
         private Button btnLimpiar;
         private Button btnCancelar;
         private Button btnAceptar;

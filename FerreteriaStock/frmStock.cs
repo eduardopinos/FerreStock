@@ -25,7 +25,7 @@ namespace FerreteriaStock
 
         private void btnProveedores_Click(object sender, EventArgs e)
         {
-            frmNuevo_Proveedor Ventana = new frmNuevo_Proveedor();
+            FrmProveedores Ventana = new FrmProveedores();
             Ventana.ShowDialog();
         }
 
@@ -42,8 +42,13 @@ namespace FerreteriaStock
 
         private void frmStock_Load(object sender, EventArgs e)
         {
-            Conectar_BBDD conectar = new CapaNegocio.Conectar_BBDD();
+            Listado_de_productos conectar = new CapaNegocio.Listado_de_productos();
             dGVStock.DataSource = conectar.listar();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

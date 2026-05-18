@@ -58,6 +58,7 @@
             btnCancelar.TabIndex = 1;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // dateTimePicker1
             // 
@@ -70,7 +71,10 @@
             // 
             dGVStock.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dGVStock.Location = new Point(26, 48);
+            dGVStock.MultiSelect = false;
             dGVStock.Name = "dGVStock";
+            dGVStock.ReadOnly = true;
+            dGVStock.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dGVStock.Size = new Size(730, 325);
             dGVStock.TabIndex = 3;
             dGVStock.CellContentClick += dataGridView1_CellContentClick;
