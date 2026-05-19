@@ -28,22 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dGVProveedores = new DataGridView();
             lblBuscar = new Label();
             txtBuscar = new TextBox();
             btnAgregar = new Button();
             btnEditar = new Button();
             dtmProveedores = new DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dGVProveedores).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dGVProveedores
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 104);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(643, 293);
-            dataGridView1.TabIndex = 0;
+            dGVProveedores.BackgroundColor = SystemColors.ButtonHighlight;
+            dGVProveedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dGVProveedores.Location = new Point(12, 104);
+            dGVProveedores.Name = "dGVProveedores";
+            dGVProveedores.Size = new Size(643, 293);
+            dGVProveedores.TabIndex = 0;
+            dGVProveedores.CellContentClick += dGVProveedores_CellContentClick;
             // 
             // lblBuscar
             // 
@@ -91,23 +93,27 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            BackColor = Color.DarkSeaGreen;
             ClientSize = new Size(800, 450);
             Controls.Add(dtmProveedores);
             Controls.Add(btnEditar);
             Controls.Add(btnAgregar);
             Controls.Add(txtBuscar);
             Controls.Add(lblBuscar);
-            Controls.Add(dataGridView1);
+            Controls.Add(dGVProveedores);
             Name = "FrmProveedores";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Proveedores";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += FrmProveedores_Load;
+            ((System.ComponentModel.ISupportInitialize)dGVProveedores).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dGVProveedores;
         private Label lblBuscar;
         private TextBox txtBuscar;
         private Button btnAgregar;

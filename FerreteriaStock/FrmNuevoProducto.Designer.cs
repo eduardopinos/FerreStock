@@ -51,6 +51,7 @@
             // 
             // grpIngresoNuevoProducto
             // 
+            grpIngresoNuevoProducto.BackColor = Color.LightCyan;
             grpIngresoNuevoProducto.Controls.Add(lnkImagen);
             grpIngresoNuevoProducto.Controls.Add(txtPrecioVenta);
             grpIngresoNuevoProducto.Controls.Add(txtPrecioCompra);
@@ -191,10 +192,11 @@
             // 
             btnAceptar.Location = new Point(77, 310);
             btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(75, 23);
+            btnAceptar.Size = new Size(75, 25);
             btnAceptar.TabIndex = 1;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
+            btnAceptar.Click += btnAceptar_Click;
             // 
             // btnCancelar
             // 
@@ -217,12 +219,15 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            BackColor = Color.DarkSeaGreen;
             ClientSize = new Size(800, 450);
             Controls.Add(dtmNuevoProducto);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
             Controls.Add(grpIngresoNuevoProducto);
             Name = "FrmNuevoProducto";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Nuevo Producto";
             grpIngresoNuevoProducto.ResumeLayout(false);
             grpIngresoNuevoProducto.PerformLayout();

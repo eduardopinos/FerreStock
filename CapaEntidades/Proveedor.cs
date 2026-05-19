@@ -8,7 +8,7 @@ namespace CapaEntidades
     {
         public int id {  get; set; }
         public string nombre { get; set; }
-        public float cuit { get; set; }
+        public string cuit { get; set; }
         public string direccion { get; set; }
         public string correo { get; set; }
         public long telefono { get; set; }

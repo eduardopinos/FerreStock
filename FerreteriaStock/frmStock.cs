@@ -31,19 +31,24 @@ namespace FerreteriaStock
 
         private void btnNuevoProducto_Click(object sender, EventArgs e)
         {
-            FrmNuevoProducto Ventana = new FrmNuevoProducto();
-            Ventana.ShowDialog();
+            FrmNuevoProducto frmNuevoProducto = new FrmNuevoProducto();
+            frmNuevoProducto.ShowDialog();
+            cargar();
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
-        private void frmStock_Load(object sender, EventArgs e)
+        private void cargar()
         {
             Listado_de_productos conectar = new CapaNegocio.Listado_de_productos();
             dGVStock.DataSource = conectar.listar();
+        }
+        private void frmStock_Load(object sender, EventArgs e)
+        {
+           cargar();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

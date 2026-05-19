@@ -53,6 +53,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = Color.LightCyan;
             groupBox1.Controls.Add(txtCatalogo);
             groupBox1.Controls.Add(txtWeb);
             groupBox1.Controls.Add(txtCuit);
@@ -225,21 +226,23 @@
             // 
             // dtmNuevoProveedor
             // 
-            dtmNuevoProveedor.Location = new Point(428, 318);
+            dtmNuevoProveedor.Location = new Point(413, 318);
             dtmNuevoProveedor.Name = "dtmNuevoProveedor";
-            dtmNuevoProveedor.Size = new Size(200, 23);
+            dtmNuevoProveedor.Size = new Size(215, 23);
             dtmNuevoProveedor.TabIndex = 3;
             // 
             // frmNuevo_Proveedor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkSeaGreen;
             ClientSize = new Size(800, 450);
             Controls.Add(dtmNuevoProveedor);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
             Controls.Add(groupBox1);
             Name = "frmNuevo_Proveedor";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Nuevo_Proveedor";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

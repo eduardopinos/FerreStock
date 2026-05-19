@@ -69,13 +69,14 @@
             // 
             // dGVStock
             // 
+            dGVStock.BackgroundColor = Color.LightCyan;
             dGVStock.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dGVStock.Location = new Point(26, 48);
             dGVStock.MultiSelect = false;
             dGVStock.Name = "dGVStock";
             dGVStock.ReadOnly = true;
             dGVStock.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dGVStock.Size = new Size(730, 325);
+            dGVStock.Size = new Size(744, 307);
             dGVStock.TabIndex = 3;
             dGVStock.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -126,8 +127,11 @@
             // 
             // frmStock
             // 
+            AccessibleRole = AccessibleRole.None;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            BackColor = Color.DarkSeaGreen;
             ClientSize = new Size(800, 450);
             Controls.Add(btnNuevoProducto);
             Controls.Add(btnProveedores);
@@ -139,6 +143,7 @@
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
             Name = "frmStock";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Stock";
             Load += frmStock_Load;
             ((System.ComponentModel.ISupportInitialize)dGVStock).EndInit();

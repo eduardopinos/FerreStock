@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,18 @@ namespace CapaVista
         {
             frmNuevo_Proveedor Ventana = new frmNuevo_Proveedor();
             Ventana.ShowDialog();
+        }
+
+        private void dGVProveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void FrmProveedores_Load(object sender, EventArgs e)
+        {
+            ListaDeProveedores lista = new ListaDeProveedores();
+
+            dGVProveedores.DataSource = lista.Listar();
         }
     }
 }

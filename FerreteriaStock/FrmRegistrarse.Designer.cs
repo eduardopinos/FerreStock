@@ -51,6 +51,7 @@
             // 
             // grpNuevoRegistro
             // 
+            grpNuevoRegistro.BackColor = Color.LightCyan;
             grpNuevoRegistro.Controls.Add(txtContraseña);
             grpNuevoRegistro.Controls.Add(txtUsuario);
             grpNuevoRegistro.Controls.Add(lblContraseña);
@@ -221,11 +222,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkSeaGreen;
             ClientSize = new Size(800, 450);
             Controls.Add(dtmRegistrarse);
             Controls.Add(lblNuevoUsuario);
             Controls.Add(grpNuevoRegistro);
             Name = "FrmRegistrarse";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Registrarse";
             grpNuevoRegistro.ResumeLayout(false);
             grpNuevoRegistro.PerformLayout();

@@ -6,7 +6,7 @@ namespace CapaEntidades
 {
     public class Producto
     {
-        public int Id_producto { get; set; }
+     
         public string producto { get; set; }
         public string categoria { get; set; }
         public string proveedor { get; set; }
@@ -14,7 +14,7 @@ namespace CapaEntidades
         public decimal precio_de_compra { get; set; }
         public decimal precio_de_venta { get; set; }
         public string imagen { get; set; }
-
+        
 
 
 

@@ -112,6 +112,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkSeaGreen;
             ClientSize = new Size(780, 450);
             Controls.Add(dateTimePicker1);
             Controls.Add(txtContraseña);
@@ -121,7 +122,10 @@
             Controls.Add(btnRegistrarse);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
+            ForeColor = SystemColors.ActiveCaptionText;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Name = "FrmLoguin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Loguin";
             Load += Form1_Load;
             ResumeLayout(false);
