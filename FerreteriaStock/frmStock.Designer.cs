@@ -37,6 +37,7 @@
             btnConfigurar = new Button();
             btnProveedores = new Button();
             btnNuevoProducto = new Button();
+            lbluUsuarioActual = new Label();
             ((System.ComponentModel.ISupportInitialize)dGVStock).BeginInit();
             SuspendLayout();
             // 
@@ -125,6 +126,14 @@
             btnNuevoProducto.UseVisualStyleBackColor = true;
             btnNuevoProducto.Click += btnNuevoProducto_Click;
             // 
+            // lbluUsuarioActual
+            // 
+            lbluUsuarioActual.AutoSize = true;
+            lbluUsuarioActual.Location = new Point(702, 22);
+            lbluUsuarioActual.Name = "lbluUsuarioActual";
+            lbluUsuarioActual.Size = new Size(0, 15);
+            lbluUsuarioActual.TabIndex = 9;
+            // 
             // frmStock
             // 
             AccessibleRole = AccessibleRole.None;
@@ -133,6 +142,7 @@
             AutoSize = true;
             BackColor = Color.DarkSeaGreen;
             ClientSize = new Size(800, 450);
+            Controls.Add(lbluUsuarioActual);
             Controls.Add(btnNuevoProducto);
             Controls.Add(btnProveedores);
             Controls.Add(btnConfigurar);
@@ -162,5 +172,6 @@
         private Button btnConfigurar;
         private Button btnProveedores;
         private Button btnNuevoProducto;
+        private Label lbluUsuarioActual;
     }
 }

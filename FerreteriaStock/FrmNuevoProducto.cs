@@ -16,6 +16,7 @@ namespace CapaVista
         public FrmNuevoProducto()
         {
             InitializeComponent();
+            lblsesionactual.Text = $"Usuario: {SesionActual.Usuario}";
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -41,7 +42,7 @@ namespace CapaVista
                 negocio.AgregarProducto(producto);
 
                 MessageBox.Show("Producto agregado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-               
+
                 txtProducto.Clear();
                 txtCategoria.Clear();
                 txtProveedor.Clear();
@@ -60,6 +61,11 @@ namespace CapaVista
 
                 throw;
             }
+
+        }
+
+        private void FrmNuevoProducto_Load(object sender, EventArgs e)
+        {
 
         }
     }

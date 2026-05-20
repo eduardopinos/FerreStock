@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace CapaVista
         public frmNuevo_Proveedor()
         {
             InitializeComponent();
+            lblsesionActual.Text = $"Usuario: {SesionActual.Usuario}";
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

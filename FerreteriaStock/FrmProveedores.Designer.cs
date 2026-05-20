@@ -34,6 +34,7 @@
             btnAgregar = new Button();
             btnEditar = new Button();
             dtmProveedores = new DateTimePicker();
+            lblsesionActual = new Label();
             ((System.ComponentModel.ISupportInitialize)dGVProveedores).BeginInit();
             SuspendLayout();
             // 
@@ -89,6 +90,15 @@
             dtmProveedores.Size = new Size(200, 23);
             dtmProveedores.TabIndex = 5;
             // 
+            // lblsesionActual
+            // 
+            lblsesionActual.AutoSize = true;
+            lblsesionActual.Location = new Point(702, 21);
+            lblsesionActual.Name = "lblsesionActual";
+            lblsesionActual.Size = new Size(38, 15);
+            lblsesionActual.TabIndex = 6;
+            lblsesionActual.Text = "label1";
+            // 
             // FrmProveedores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -96,6 +106,7 @@
             AutoSize = true;
             BackColor = Color.DarkSeaGreen;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblsesionActual);
             Controls.Add(dtmProveedores);
             Controls.Add(btnEditar);
             Controls.Add(btnAgregar);
@@ -119,5 +130,6 @@
         private Button btnAgregar;
         private Button btnEditar;
         private DateTimePicker dtmProveedores;
+        private Label lblsesionActual;
     }
 }

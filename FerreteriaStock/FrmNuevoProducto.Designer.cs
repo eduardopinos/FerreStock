@@ -46,6 +46,7 @@
             btnAceptar = new Button();
             btnCancelar = new Button();
             dtmNuevoProducto = new DateTimePicker();
+            lblsesionactual = new Label();
             grpIngresoNuevoProducto.SuspendLayout();
             SuspendLayout();
             // 
@@ -215,6 +216,14 @@
             dtmNuevoProducto.Size = new Size(215, 23);
             dtmNuevoProducto.TabIndex = 3;
             // 
+            // lblsesionactual
+            // 
+            lblsesionactual.AutoSize = true;
+            lblsesionactual.Location = new Point(677, 9);
+            lblsesionactual.Name = "lblsesionactual";
+            lblsesionactual.Size = new Size(0, 15);
+            lblsesionactual.TabIndex = 4;
+            // 
             // FrmNuevoProducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -222,6 +231,7 @@
             AutoSize = true;
             BackColor = Color.DarkSeaGreen;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblsesionactual);
             Controls.Add(dtmNuevoProducto);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
@@ -229,9 +239,11 @@
             Name = "FrmNuevoProducto";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Nuevo Producto";
+            Load += FrmNuevoProducto_Load;
             grpIngresoNuevoProducto.ResumeLayout(false);
             grpIngresoNuevoProducto.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -254,5 +266,6 @@
         private TextBox txtCategoria;
         private TextBox txtProducto;
         private DateTimePicker dtmNuevoProducto;
+        private Label lblsesionactual;
     }
 }

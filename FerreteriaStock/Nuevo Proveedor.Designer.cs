@@ -48,6 +48,7 @@
             btnAceptar = new Button();
             btnCancelar = new Button();
             dtmNuevoProveedor = new DateTimePicker();
+            lblsesionActual = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -231,12 +232,22 @@
             dtmNuevoProveedor.Size = new Size(215, 23);
             dtmNuevoProveedor.TabIndex = 3;
             // 
+            // lblsesionActual
+            // 
+            lblsesionActual.AutoSize = true;
+            lblsesionActual.Location = new Point(708, 9);
+            lblsesionActual.Name = "lblsesionActual";
+            lblsesionActual.Size = new Size(38, 15);
+            lblsesionActual.TabIndex = 4;
+            lblsesionActual.Text = "label1";
+            // 
             // frmNuevo_Proveedor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSeaGreen;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblsesionActual);
             Controls.Add(dtmNuevoProveedor);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
@@ -247,6 +258,7 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -271,5 +283,6 @@
         private TextBox txtCuit;
         private MaskedTextBox mskTelefono;
         private DateTimePicker dtmNuevoProveedor;
+        private Label lblsesionActual;
     }
 }

@@ -1,4 +1,5 @@
-﻿using CapaNegocio;
+﻿using CapaDatos;
+using CapaNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace CapaVista
         public FrmProveedores()
         {
             InitializeComponent();
+            lblsesionActual.Text = $"Usuario: {SesionActual.Usuario}";
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

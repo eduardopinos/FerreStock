@@ -1,6 +1,7 @@
 using CapaNegocio;
 using System.Security.Cryptography.X509Certificates;
 using CapaEntidades;
+using CapaDatos;
 
 namespace FerreteriaStock
 {
@@ -39,7 +40,9 @@ namespace FerreteriaStock
                 ChequearUsuarioContraseñaNegocio chequear = new ChequearUsuarioContraseñaNegocio();
                 if (chequear.ValidarUsuarioContraseña(usuario))
                 {
+                    SesionActual.Usuario = usuario.usuario;
                     frmStock Ventana = new frmStock();
+                    
 
                     Ventana.ShowDialog();
                     txtUsuario.Clear();

@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using CapaNegocio;
 using CapaDatos;
+using CapaEntidades;
 
 namespace FerreteriaStock
 {
@@ -16,6 +17,7 @@ namespace FerreteriaStock
         public frmStock()
         {
             InitializeComponent();
+            lbluUsuarioActual.Text = $"Usuario: {SesionActual.Usuario}";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,9 +48,11 @@ namespace FerreteriaStock
             Listado_de_productos conectar = new CapaNegocio.Listado_de_productos();
             dGVStock.DataSource = conectar.listar();
         }
+        
         private void frmStock_Load(object sender, EventArgs e)
         {
            cargar();
+         
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
