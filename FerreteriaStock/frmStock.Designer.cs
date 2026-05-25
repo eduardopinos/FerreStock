@@ -89,6 +89,7 @@
             btnBuscar.TabIndex = 4;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // txtBuscar
             // 
@@ -96,6 +97,7 @@
             txtBuscar.Name = "txtBuscar";
             txtBuscar.Size = new Size(100, 23);
             txtBuscar.TabIndex = 5;
+            txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // btnConfigurar
             // 
@@ -141,7 +143,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.DarkSeaGreen;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(899, 450);
             Controls.Add(lbluUsuarioActual);
             Controls.Add(btnNuevoProducto);
             Controls.Add(btnProveedores);
